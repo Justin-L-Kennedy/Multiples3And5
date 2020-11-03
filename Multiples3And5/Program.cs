@@ -35,6 +35,22 @@ namespace Multiples3And5
                 }
             }
             Console.WriteLine(sumOfFives); //show sum of the multiples of 5
+
+            //multiples of both 3 & 5
+            int sumOfThreesAndFives = 0;
+            for (int i = 1; i < 1000; i++)
+            {
+                int multipleOfThreeAndFive = i * 5;
+                if (multipleOfThreeAndFive < 1000 && multipleOfThreeAndFive % 3 == 0)
+                {
+                    Console.WriteLine(multipleOfThreeAndFive); //show multiples of both 3 & 5
+                    sumOfThreesAndFives += multipleOfThreeAndFive;
+                }
+            }
+            Console.WriteLine(sumOfThreesAndFives); //show sum of the multiples of both 3 & 5
+
+            int sum = sumOfThrees + sumOfFives - sumOfThreesAndFives;
+            Console.WriteLine(sum);
         }
     }
 }
